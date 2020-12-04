@@ -1,11 +1,16 @@
 import React from "react";
 import "./App.css";
 import GuessedWords from "./conmponents/GuessedWords";
+import Congrats from "./conmponents/Congrats";
 
 function App() {
-  const contents = [{ guessedWord: "traiin", letterMatchCount: 3 }];
   return (
-    <div className="App">
+    <div className="container">
+      <h1>Jotto</h1>
+      <Congrats success={true} />
+      <GuessedWords
+        guessedWords={[{ guessedWord: "train", letterMatchCount: 3 }]}
+      />
     </div>
   );
 }
